@@ -1,0 +1,11 @@
+models:
+users
+friendships 
+user_tutor (belongs to user, belongs_to course, rate, desc)
+schools
+courses
+posts
+user_course
+user_school
+user_favorites
+
