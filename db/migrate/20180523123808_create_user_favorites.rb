@@ -2,7 +2,7 @@ class CreateUserFavorites < ActiveRecord::Migration[5.2]
   def change
     create_table :user_favorites do |t|
     	t.integer :user_id
-      t.string :favorite_type # user, post
+      t.string :favorite_type # post, comment
       t.integer :favorite_id
       t.timestamps null: false
     end
