@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
 
 	# User has many posts
-	has_many :posts, dependent: :destroy
+	has_many :posts, as: :relationship, dependent: :destroy
 	
 	# User has many favorite courses
 	has_many :user_favorites, dependent: :destroy
@@ -27,11 +27,11 @@ class User < ApplicationRecord
 
 	# Users can be friends with other users
 	has_many :friendships
-	has_many :friends, :through => :friendships
+	has_many :friends, :through => :friendships # CALL TO GET WHO THIS USER FRIENDED
 
 	# determine what other users have added a user as a friend
 	has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
-	has_many :inverse_friends, :through => :inverse_friendships, :source => :user
+	has_many :inverse_friends, :through => :inverse_friendships, :source => :user # CALL TO GET WHO FRIENDED THIS USER
 
 	# determine if a user is a tutor of a course
 	has_many :user_tutors
