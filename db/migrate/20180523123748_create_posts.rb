@@ -10,7 +10,6 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.timestamps null: false
     end
     add_index :posts, :user_id
-    add_index :posts, :post_id
     add_index :posts, [:relationship_type,:relationship_id]
   end
 end
