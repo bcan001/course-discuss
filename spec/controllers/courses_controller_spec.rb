@@ -2,7 +2,7 @@ require "rails_helper"
 
 # command to run the test:
 # rspec spec/controllers/courses_controller_spec.rb
-RSpec.describe CoursesController, :type => :controller do
+# RSpec.describe CoursesController, :type => :controller do
 	# describe "GET index" do
  #    it 'it renders the index template successfully' do
  #    	get :index
@@ -10,5 +10,5 @@ RSpec.describe CoursesController, :type => :controller do
  #    end
  #  end
 
-end
+# end
 
