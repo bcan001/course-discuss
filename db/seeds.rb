@@ -40,11 +40,11 @@ course11 = school5.courses.build(name: "Mathematics 301", description: "Advanced
 
 # create a favorite course for the user
 # UserFavorite.create(user_id: 1, course_id: 1)
-user_favorite = user.user_favorites.build(favorite_type: 'course', favorite_id: 1).save
+user_favorite = user.user_favorites.build(favorite_type: 'Course', favorite_id: 1).save
 
 # create a post that belongs to our one user
 # Post.create(title: "First Post", description: "This is the first post", user_id: 1, school_id: 1, course_id: 1)
-post = user.posts.build(title: "First Post", description: "This is the first post", relationship_type: 'course', relationship_id: 1).save
+post = user.posts.build(title: "First Post", description: "This is the first post", relationship_type: 'Course', relationship_id: 1).save
 
 # make the user into a tutor
 # @user = User.first
@@ -53,7 +53,7 @@ post = user.posts.build(title: "First Post", description: "This is the first pos
 
 # create tutor profile for the user
 # UserTutor.create(id: 1, rate: 12, description: "I am great at Math!", user_id: 1, course_id: 1)
-user_tutor = user.user_tutors.build(rate: 12, rate_type: 'hourly', description: "I am great at Math!", course_id: 1).save
+user_tutor = user.user_tutors.build(rate: 12, rate_type: 'Hourly', description: "I am great at Math!", course_id: 1).save
 
 # find the courses that a user is a tutor of
 # puts @user.is_tutors.find_by(course_id: @user.courses.first.id)
